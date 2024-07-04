@@ -1,0 +1,36 @@
+<div class="container mb-1 d-flex ">
+
+  <button class="btn btn-primary align-item-end" (click)="logout()">
+  Log Out
+     </button>
+</div>
+<div class="container">
+  <div class="d-flex">
+
+    <h2>Notes List</h2>
+    <button class="add-note-btn" routerLink="/addnote">
+     Add Note
+      </button>
+  </div>
+  <table class="notes-table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let note of notes; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ note.title }}</td>
+        <td>{{ note.description }}</td>
+        <td>
+          <button class="edit-btn" (click)="editNote(note._id)">Edit</button>
+          <button class="delete-btn" (click)="deleteNote(note._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>{{ isEditMode ? 'Edit Note' : 'Add Note' }}</h2>
+  <form [formGroup]="noteForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title</label>
+    <input type="text" id="title" class="form-control" formControlName="title" placeholder="Enter title">
+    <div *ngIf="noteForm.get('title')?.invalid && (noteForm.get('title')?.dirty || noteForm.get('title')?.touched)" class="error">
+      <span *ngIf="noteForm.get('title')?.errors?.['required']">Title is required.</span>
+    </div>
+
+    <label for="description">Description</label>
+    <textarea id="description" class="form-control" formControlName="description" placeholder="Enter description"></textarea>
+    <div *ngIf="noteForm.get('description')?.invalid && (noteForm.get('description')?.dirty || noteForm.get('description')?.touched)" class="error">
+      <span *ngIf="noteForm.get('description')?.errors?.['required']">Description is required.</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!noteForm.valid">
+      {{ isEditMode ? 'Update Note' : 'Add Note' }}
+    </button>
+  </form>
+</div>

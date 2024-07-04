@@ -1,0 +1,29 @@
+{
+  "successMessages": {
+    "LoggedIn": "Login successfully!",
+    "SignUp":"SignUp successfully!!!!",
+    "notesAdded":"Note Added successfully!!!!!",
+    "notelist":"Note List successfully Fetched!!",
+    "notesedited":"Note Updated successfully!!!",
+    "notedeleted":"Note deleted successfully!!!"
+  },
+
+  "errorMessages": {
+    "authenticationFailed": "You are not allowed to perform this action.",
+    "tokenExpire": "Access Token is Expired. Please Authenticate Again.",
+    "invalidAccessToken": "Access Token is invalid.",
+    "userNotFound": "The entered email address is not registered with us!.",
+    "incorrectPassword": "Incorrect password entered.",
+    "invalidToken": "Refresh Toke in Expired. Please Authenticate Again.",
+    "needAuthentication": "Please Authenticate"
+  },
+
+  "validationMessages": {
+   "email": "Please provide valid email address",
+   "password": "password is required",
+   "title":"Please provide valid title",
+   "description":"Please provide valid description",
+   "userId":"Please provide valid userId",
+   "noteId":"Please provide valid noteId"
+  }
+}
